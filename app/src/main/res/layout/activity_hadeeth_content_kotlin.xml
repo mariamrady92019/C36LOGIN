@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".hadeeth.HadeethContentKotlin"
+    android:background="@drawable/default_bg"
+    >
+     <TextView
+         android:id="@+id/hadeth_num"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:gravity="center"
+         android:layout_marginTop="20sp"
+          app:layout_constraintTop_toTopOf="parent"
+         app:layout_constraintStart_toStartOf="parent"
+         android:text="الحديث الاول"
+         android:fontFamily="@font/dt"
+         android:textSize="30sp"
+         android:textStyle="bold"
+         />
+
+     <androidx.constraintlayout.widget.Guideline
+         android:id="@+id/guideline"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         app:layout_constraintGuide_end="611dp"
+         android:orientation="horizontal"
+         />
+
+     <androidx.cardview.widget.CardView
+         android:layout_width="0dp"
+          app:layout_constraintWidth_percent="0.9"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+         android:layout_height="0dp"
+         app:layout_constraintHeight_percent="0.75"
+         app:layout_constraintTop_toBottomOf="@id/guideline"
+         app:cardCornerRadius="30dp"
+         android:elevation="30dp"
+         app:layout_goneMarginBottom="20dp"
+         >
+         <androidx.constraintlayout.widget.ConstraintLayout
+             android:layout_width="match_parent"
+             android:layout_height="match_parent">
+              <TextView
+                  android:id="@+id/had_num"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:gravity="center"
+                  app:layout_constraintTop_toTopOf="parent"
+                  android:layout_marginTop="20dp"
+                  android:text="الحديث رقم "
+                  android:textColor="@color/brown"
+                  android:textSize="25sp"
+                  android:fontFamily="@font/dt"
+                  />
+
+              <View
+                  android:id="@+id/decoratoeline"
+                  android:layout_width="match_parent"
+                  android:layout_height="2dp"
+                  android:background="@color/brown"
+                  android:layout_margin="10dp"
+                  app:layout_constraintTop_toBottomOf="@id/had_num"
+                  />
+              <TextView
+                  android:id="@+id/had_details"
+                  android:layout_width="match_parent"
+                  android:layout_height="0dp"
+                  android:gravity="top|center"
+                   app:layout_constraintTop_toBottomOf="@id/decoratoeline"
+                  app:layout_constraintBottom_toBottomOf="parent"
+                   android:layout_marginTop="20dp"
+                  android:text="الحديث رقم "
+                  android:textSize="25sp"
+                  android:fontFamily="@font/dt"
+                  />
+
+         </androidx.constraintlayout.widget.ConstraintLayout>
+     </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
